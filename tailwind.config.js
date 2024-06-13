@@ -9,6 +9,10 @@ module.exports = {
         accent: '#bce7b7',
         accent2: '#bfb5ff',
       },
+      fontFamily: {
+        sans: ['Montserrat'],
+        serif: ['Inter'],
+      },
     },
   },
   plugins: [],

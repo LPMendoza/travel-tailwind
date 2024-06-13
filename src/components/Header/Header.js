@@ -11,10 +11,10 @@ export default function Header() {
           <Button>
             <div className="bg-accent w-2 h-2 rounded-full"></div>New destination
           </Button>
-          <a className="text-gray-400 font-bold px-4 py-1" href="/">
+          <a className="text-gray-400 font-semibold px-4 py-1" href="/">
             Search
           </a>
-          <a className="text-gray-400 font-bold px-4 py-1" href="/">
+          <a className="text-gray-400 font-semibold px-4 py-1" href="/">
             Tours
           </a>
         </div>
