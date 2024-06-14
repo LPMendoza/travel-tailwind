@@ -8,7 +8,7 @@ export default function Score({ score }) {
         <div className="flex gap-2 items-center">
           <img src={Star} className="w-4 h-4" alt="star icon" />
           <span className="text-2xl font-semibold">{score}</span>
-          <span className="text-2xl text-gray-400 font-semibold">/ 5.00</span>
+          <span className="text-2xl text-gray1/60 font-semibold">/ 5.00</span>
         </div>
         <span className="flex gap-2 items-center">
           <img src={User} className="w-3" alt="user icon" />
