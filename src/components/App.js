@@ -32,23 +32,45 @@ function App() {
         <img src={place.image} alt="background" className="fixed h-full w-full object-cover z-0" />
       )}
       <div className="fixed h-full w-full backdrop-blur-md z-0"></div>
-      <div className="flex flex-col gap-3 h-screen bg-primary/30 text-sm relative z-1">
-        <Header />
-        <div className="container relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
-          <PlacesSlider
-            places={places}
-            onChange={onChangeImage}
-            currentPlace={place}
-            country="Switzerland"
-            flag={Flag}
-          />
-          <Footer
-            places={places}
-            onPlaceClick={setPlace}
-            currentPlace={place}
-            destiny={'Switzerland'}
-            visitors={112}
-          />
+      <div className="flex gap-2 container mx-auto">
+        <div className="flex flex-col gap-3 h-screen text-sm relative z-1 w-2/3">
+          <Header />
+          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
+            <PlacesSlider
+              places={places}
+              onChange={onChangeImage}
+              currentPlace={place}
+              country="Switzerland"
+              flag={Flag}
+            />
+            <Footer
+              places={places}
+              onPlaceClick={setPlace}
+              currentPlace={place}
+              destiny={'Switzerland'}
+              visitors={112}
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 h-screen text-sm relative z-1 w-1/3">
+          <Header />
+          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
+            <PlacesSlider
+              places={places}
+              onChange={onChangeImage}
+              currentPlace={place}
+              country="Switzerland"
+              flag={Flag}
+            />
+            <Footer
+              places={places}
+              onPlaceClick={setPlace}
+              currentPlace={place}
+              destiny={'Switzerland'}
+              visitors={112}
+            />
+          </div>
         </div>
       </div>
     </>
