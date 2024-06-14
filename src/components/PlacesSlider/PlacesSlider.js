@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import Left from '../../assets/images/left.png';
 import Right from '../../assets/images/right.png';
-import Flag from '../../assets/images/switzerland.png';
 
-export default function PlacesSlider({ places, onChange, currentPlace }) {
+export default function PlacesSlider({ places, onChange, currentPlace, country, flag }) {
   const [placesIndex, setPlaceIndex] = useState(0);
 
   const handleOnLeftClick = () => {
@@ -30,25 +29,25 @@ export default function PlacesSlider({ places, onChange, currentPlace }) {
       />
       <div className="flex items-center gap-8 relative z-1 py-8 px-16">
         <span className="font-bold flex gap-2">
-          <img src={Flag} className="w-4" />
-          Switzerland
+          <img src={flag} className="w-4" alt="flag" />
+          {country}
         </span>
         <div className="flex items-center gap-2">
           <button
             className="flex items-center justify-center h-8 w-8 rounded-full hover:border focus:border border-slate-900"
             onClick={handleOnLeftClick}
           >
-            <img src={Left} className="w-3" />
+            <img src={Left} className="w-3" alt="back button" />
           </button>
           <button
             className="flex items-center justify-center h-8 w-8 rounded-full hover:border focus:border border-slate-900"
             onClick={handleOnRightClick}
           >
-            <img src={Right} className="w-3" />
+            <img src={Right} className="w-3" alt="next button" />
           </button>
         </div>
         <div className="border border-primary p-0 bg-primary w-full"></div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-baseline gap-1">
           <span className="text-xl ">
             {placesIndex < 10 ? `0${placesIndex + 1}` : placesIndex + 1}
           </span>
