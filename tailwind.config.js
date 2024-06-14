@@ -10,8 +10,8 @@ module.exports = {
         accent2: '#bfb5ff',
       },
       fontFamily: {
-        sans: ['Montserrat'],
-        serif: ['Inter'],
+        primary: ['Montserrat'],
+        secondary: ['Inter'],
       },
     },
   },

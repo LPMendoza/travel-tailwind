@@ -7,6 +7,8 @@ export default function PlacesSlider({ places, onChange, currentPlace, country, 
 
   const handleOnLeftClick = () => {
     if (placesIndex === 0) {
+      setPlaceIndex(places.length - 1);
+      onChange(places[places.length - 1]);
       return;
     }
     setPlaceIndex((prevState) => prevState - 1);
@@ -14,6 +16,8 @@ export default function PlacesSlider({ places, onChange, currentPlace, country, 
   };
   const handleOnRightClick = () => {
     if (placesIndex === places.length - 1) {
+      setPlaceIndex(0);
+      onChange(places[0]);
       return;
     }
     setPlaceIndex((prevState) => prevState + 1);
@@ -27,8 +31,8 @@ export default function PlacesSlider({ places, onChange, currentPlace, country, 
         alt="places"
         className="w-full h-full object-cover absolute z-0"
       />
-      <div className="flex items-center gap-8 relative z-1 py-8 px-16">
-        <span className="font-bold flex gap-2">
+      <div className="flex items-center gap-8 relative z-1 py-8 px-16 text-secondary">
+        <span className="font-semibold flex gap-2">
           <img src={flag} className="w-4" alt="flag" />
           {country}
         </span>
@@ -46,9 +50,9 @@ export default function PlacesSlider({ places, onChange, currentPlace, country, 
             <img src={Right} className="w-3" alt="next button" />
           </button>
         </div>
-        <div className="border border-primary p-0 bg-primary w-full"></div>
+        <div className="border-t border-primary p-0 bg-primary w-full"></div>
         <div className="flex items-baseline gap-1">
-          <span className="text-xl ">
+          <span className="text-2xl font-semibold">
             {placesIndex < 10 ? `0${placesIndex + 1}` : placesIndex + 1}
           </span>
           <span className="text-gray-500">

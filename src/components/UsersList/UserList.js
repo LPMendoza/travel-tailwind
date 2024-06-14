@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function UserLists() {
+export default function UserLists({ currentPlace }) {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = async () => {
@@ -15,10 +15,10 @@ export default function UserLists() {
 
   useEffect(() => {
     fetchUsers();
-  }, []);
+  }, [currentPlace]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center h-8">
       {users?.map(({ picture, name }) => (
         <img
           key={name.first}

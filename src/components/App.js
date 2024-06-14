@@ -25,14 +25,11 @@ function App() {
   const onChangeImage = (place) => {
     setPlace(place);
   };
+
   return (
     <>
       {place && (
-        <img
-          src={place.image}
-          alt="background"
-          className="fixed h-full w-full object-cover z-0 background-image"
-        />
+        <img src={place.image} alt="background" className="fixed h-full w-full object-cover z-0" />
       )}
       <div className="fixed h-full w-full backdrop-blur-md z-0"></div>
       <div className="flex flex-col gap-3 h-screen bg-primary/30 text-sm relative z-1">
