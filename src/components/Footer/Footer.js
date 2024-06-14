@@ -20,11 +20,11 @@ export default function Footer({ destiny, places, onPlaceClick, currentPlace, vi
           </div>
           <div className="flex gap-4 items-center text-xs">
             <span className="flex gap-2 items-center">
-              <img src={Heart} className="w-4" />
+              <img src={Heart} className="w-4" alt="recommended by" />
               Voted by Roam®
             </span>
             <span className="flex gap-2 items-center">
-              <img src={World} className="w-4" />
+              <img src={World} className="w-4" alt="visitors quantity" />
               {visitors}k visitors
             </span>
           </div>
