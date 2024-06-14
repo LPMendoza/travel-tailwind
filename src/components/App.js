@@ -10,18 +10,25 @@ import Lucerne from '../assets/images/lucerne.jpg';
 import Zurich from '../assets/images/zurich.jpg';
 import Footer from './Footer/Footer';
 
-const images = [Zermartt, Bern, Geneva, interlaken, Lucerne, Zurich];
+const places = [
+  { label: 'Zermartt', image: Zermartt },
+  { label: 'Bern', image: Bern },
+  { label: 'Geneva', image: Geneva },
+  { label: 'Interlaken', image: interlaken },
+  { label: 'Lucerne', image: Lucerne },
+  { label: 'Zurich', image: Zurich },
+];
 
 function App() {
-  const [backgroundImage, setBackgroundImage] = useState(Zermartt);
-  const onChangeImage = (image) => {
-    setBackgroundImage(image);
+  const [place, setPlace] = useState(places[0]);
+  const onChangeImage = (place) => {
+    setPlace(place);
   };
   return (
     <>
-      {backgroundImage && (
+      {place && (
         <img
-          src={backgroundImage}
+          src={place.image}
           alt="background"
           className="fixed h-full w-full object-cover z-0 background-image"
         />
@@ -30,8 +37,8 @@ function App() {
       <div className="flex flex-col gap-3 h-screen bg-primary/30 text-sm relative z-1">
         <Header />
         <div className="container relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
-          <PlacesSlider images={images} onChange={onChangeImage} />
-          <Footer />
+          <PlacesSlider places={places} onChange={onChangeImage} currentPlace={place} />
+          <Footer places={places} onPlaceClick={setPlace} currentPlace={place} />
         </div>
       </div>
     </>
