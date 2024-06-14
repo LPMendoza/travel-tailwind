@@ -2,7 +2,14 @@ import { useState } from 'react';
 import Left from '../../assets/images/left.png';
 import Right from '../../assets/images/right.png';
 
-export default function PlacesSlider({ places, onChange, currentPlace, country, flag }) {
+export default function PlacesSlider({
+  places,
+  onChange,
+  currentPlace,
+  currentIndex,
+  country,
+  flag,
+}) {
   const [placesIndex, setPlaceIndex] = useState(0);
 
   const handleOnLeftClick = () => {
@@ -53,7 +60,7 @@ export default function PlacesSlider({ places, onChange, currentPlace, country, 
         <div className="border-t border-primary p-0 bg-primary w-full"></div>
         <div className="flex items-baseline gap-1">
           <span className="text-2xl font-semibold">
-            {placesIndex < 10 ? `0${placesIndex + 1}` : placesIndex + 1}
+            {placesIndex < 10 ? `0${currentIndex + 1}` : currentIndex + 1}
           </span>
           <span className="text-gray-500">
             /{placesIndex < 10 ? `0${places.length}` : places.length}

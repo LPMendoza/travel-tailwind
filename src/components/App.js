@@ -39,6 +39,7 @@ function App() {
             places={places}
             onChange={onChangeImage}
             currentPlace={place}
+            currentIndex={places.indexOf(place)}
             country="Switzerland"
             flag={Flag}
           />
