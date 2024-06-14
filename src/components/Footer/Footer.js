@@ -7,7 +7,7 @@ import BadgesSlider from '../BadgesSlider';
 
 export default function Footer({ places, onPlaceClick, currentPlace }) {
   return (
-    <div className="flex border-t border-gray1/40 text-gray1 relative z-1 font-serif">
+    <div className="flex border-t border-gray1/40 text-gray1 relative z-1 font-serif bg-gradient-to-t from-slate-800 to-slate-900/0">
       <div className="flex flex-col items-center border-r border-gray1/40 w-2/4 py-12">
         <div className="flex flex-col min-w-72 gap-2">
           <div>
