@@ -38,7 +38,7 @@ function App() {
       <div className="flex max-xl:flex-col gap-3 container mx-auto">
         <div className="flex flex-col max-xl:w-full gap-3 h-screen text-sm relative z-1 w-2/3">
           <Header />
-          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-3xl shadow-lg overflow-hidden h-full max-md:min-h-full">
+          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-3xl shadow-lg overflow-hidden h-full">
             <PlacesSlider
               places={places}
               onChange={onChangeImage}
