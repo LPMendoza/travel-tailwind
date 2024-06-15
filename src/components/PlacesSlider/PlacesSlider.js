@@ -57,8 +57,8 @@ export default function PlacesSlider({
             <img src={Right} className="w-3" alt="next button" />
           </button>
         </div>
-        <div className="border-t border-primary p-0 bg-primary w-full"></div>
-        <div className="flex items-baseline gap-1">
+        <div className="max-sm:hidden border-t border-primary p-0 bg-primary w-full"></div>
+        <div className="flex items-baseline gap-1 max-sm:hidden">
           <span className="text-2xl font-semibold">
             {placesIndex < 10 ? `0${currentIndex + 1}` : currentIndex + 1}
           </span>
