@@ -10,6 +10,8 @@ import interlaken from '../assets/images/interlaken.jpg';
 import Lucerne from '../assets/images/lucerne.jpg';
 import Zurich from '../assets/images/zurich.jpg';
 import Footer from './Footer/Footer';
+import HeaderNavBar from './HeaderNavBar';
+import Banner from './Banner';
 
 const places = [
   { label: 'Zermartt', score: 4.5, image: Zermartt },
@@ -35,7 +37,7 @@ function App() {
       <div className="flex gap-2 container mx-auto">
         <div className="flex flex-col gap-3 h-screen text-sm relative z-1 w-2/3">
           <Header />
-          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
+          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-3xl shadow-lg overflow-hidden h-full">
             <PlacesSlider
               places={places}
               onChange={onChangeImage}
@@ -53,23 +55,10 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 h-screen text-sm relative z-1 w-1/3">
-          <Header />
-          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-xl shadow-lg overflow-hidden h-full">
-            <PlacesSlider
-              places={places}
-              onChange={onChangeImage}
-              currentPlace={place}
-              country="Switzerland"
-              flag={Flag}
-            />
-            <Footer
-              places={places}
-              onPlaceClick={setPlace}
-              currentPlace={place}
-              destiny={'Switzerland'}
-              visitors={112}
-            />
+        <div className="flex flex-col gap-3 text-sm relative z-1 w-1/3">
+          <HeaderNavBar />
+          <div className="w-full flex flex-col justify-between mx-auto mb-4">
+            <Banner />
           </div>
         </div>
       </div>
