@@ -12,6 +12,7 @@ import Zurich from '../assets/images/zurich.jpg';
 import Footer from './Footer/Footer';
 import HeaderNavBar from './HeaderNavBar';
 import Banner from './Banner';
+import SearchPlaces from './SearchPlaces';
 
 const places = [
   { label: 'Zermartt', score: 4.5, image: Zermartt },
@@ -34,10 +35,10 @@ function App() {
         <img src={place.image} alt="background" className="fixed h-full w-full object-cover z-0" />
       )}
       <div className="fixed h-full w-full backdrop-blur-md z-0"></div>
-      <div className="flex gap-2 container mx-auto">
-        <div className="flex flex-col gap-3 h-screen text-sm relative z-1 w-2/3">
+      <div className="flex max-xl:flex-col gap-3 container mx-auto">
+        <div className="flex flex-col max-xl:w-full gap-3 h-screen text-sm relative z-1 w-2/3">
           <Header />
-          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-3xl shadow-lg overflow-hidden h-full">
+          <div className="w-full relative flex flex-col justify-between mx-auto mb-4 rounded-3xl shadow-lg overflow-hidden h-full max-md:min-h-full">
             <PlacesSlider
               places={places}
               onChange={onChangeImage}
@@ -55,10 +56,13 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 text-sm relative z-1 w-1/3">
-          <HeaderNavBar />
-          <div className="w-full flex flex-col justify-between mx-auto mb-4">
-            <Banner />
+        <div className="flex flex-col gap-3 text-sm relative z-1 w-1/3 max-xl:w-full">
+          <div className="w-full relative flex flex-col mx-auto mb-4 rounded-3xl  overflow-hidden h-full">
+            <HeaderNavBar />
+            <div className="w-full h-full flex flex-col mx-auto gap-3 mt-3">
+              <Banner />
+              <SearchPlaces />
+            </div>
           </div>
         </div>
       </div>

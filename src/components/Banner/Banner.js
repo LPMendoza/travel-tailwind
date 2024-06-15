@@ -4,7 +4,7 @@ export default function Banner() {
   return (
     <div className="flex flex-col gap-8 relative z-1 py-16 px-16 text-primary bg-gray-200 rounded-3xl shadow-lg overflow-hidden">
       <div className="flex flex-col gap-6">
-        <h1 className="font-bold text-7xl	">Take a Break</h1>
+        <h1 className="font-bold text-7xl">Take a Break</h1>
         <p className="text-secondary text-lg">
           Indulge in the freedom of exploration with effortless booking platform
         </p>
